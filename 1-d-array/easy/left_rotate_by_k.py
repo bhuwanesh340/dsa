@@ -16,7 +16,7 @@ class Solution:
             #     nums[j] = temp
 
             # return nums
-
+            n = len(nums)
             k = k%n
             temp = []
 
