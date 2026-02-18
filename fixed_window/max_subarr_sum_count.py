@@ -4,7 +4,7 @@ find the count of subarrays of size le(arr) from array whose sum is greater than
 
 def max_subarr_sum_count(arr, k):
 
-    if len(arr) < k:
+    if len(arr) < 1:
         return None
     
     max_len = 0
@@ -13,10 +13,8 @@ def max_subarr_sum_count(arr, k):
     for i in range(len(arr)):
         for j in range(i, len(arr)):
             sum = sum + arr[j]
-            if sum <= s:
+            if sum <= k:
                 max_len = max(max_len, j-i+1)
-            else:   
-                break
 
     return max_len
 
